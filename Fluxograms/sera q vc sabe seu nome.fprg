@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="babi_"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-28 05:49:42 "/>
+        <attribute name="created" value="YmFiaV87REVTS1RPUC1RSzNPNDNDOzIwMjEtMDYtMjg7IjA0OjQ3OjQ0ICI7MjczMQ=="/>
+        <attribute name="edited" value="YmFiaV87REVTS1RPUC1RSzNPNDNDOzIwMjEtMDYtMjg7IjA1OjQ5OjQyICI7MjsyODQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome, sobrenome, confirmacao" type="String" array="False" size=""/>
+            <output expression="&quot;Digite seu nome:&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Digite seu sobrenome:&quot;" newline="True"/>
+            <input variable="sobrenome"/>
+            <output expression="&quot;Seu nome completo &#233; &quot; &amp;nome &amp;&quot; &quot; &amp;sobrenome &amp;&quot;?&quot;" newline="True"/>
+            <input variable="confirmacao"/>
+            <if expression="confirmacao==&quot;sim&quot;">
+                <then>
+                    <output expression="&quot;Massa! Voc&#234; sabe seu nome.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Errou? Volte duas casas. Qual seu nome?&quot;" newline="True"/>
+                    <input variable="nome"/>
+                    <output expression="&quot;Qual seu sobrenome?&quot;" newline="True"/>
+                    <input variable="sobrenome"/>
+                    <output expression="&quot;Seu nome completo &#233; &quot;&amp;nome &amp;sobrenome &amp;&quot;?&quot;" newline="True"/>
+                    <input variable="confirmacao"/>
+                    <if expression="confirmacao==&quot;sim&quot;">
+                        <then>
+                            <output expression="&quot;Agora sim! Voc&#234; sabe seu nome.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Desista.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
